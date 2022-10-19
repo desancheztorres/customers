@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use App\Commands\ImportCustomersCommand;
+use Monolog\Logger;
+use Symfony\Component\Console\Application;
+
+$log = new Logger('main');
+$mysqli = new mysqli("database", "cristian", "secret", "arcmedia");
+
+$app = new Application();
+$app->add(new ImportCustomersCommand($mysqli, $log));
+$app->run();
