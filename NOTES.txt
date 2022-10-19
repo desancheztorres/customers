@@ -1,9 +1,0 @@
-CREATE TABLE `customers` (
-  `id` char(36) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `last_name` varchar(50)  NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(50) NULL,
-  `birthday` date NULL,
-  PRIMARY KEY (ID)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
